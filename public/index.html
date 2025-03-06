@@ -4,17 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Connect 4 Multiplayer</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file for styling -->
 </head>
 <body>
 
+    <!-- Game Title and Instructions -->
     <div class="title-container">
         <h1>Connect 4</h1>
         <p class="instructions">Click a column to drop a piece. First to connect 4 wins!</p>
     </div>
 
+    <!-- Display whose turn it is -->
     <h2 id="whosturn">Waiting for opponent...</h2>
 
+    <!-- Game Board: Each column contains 6 rows -->
     <div class="board">
         <ul class="column" id="c1"><p id="c1r6"></p><p id="c1r5"></p><p id="c1r4"></p><p id="c1r3"></p><p id="c1r2"></p><p id="c1r1"></p></ul>
         <ul class="column" id="c2"><p id="c2r6"></p><p id="c2r5"></p><p id="c2r4"></p><p id="c2r3"></p><p id="c2r2"></p><p id="c2r1"></p></ul>
@@ -25,9 +28,13 @@
         <ul class="column" id="c7"><p id="c7r6"></p><p id="c7r5"></p><p id="c7r4"></p><p id="c7r3"></p><p id="c7r2"></p><p id="c7r1"></p></ul>
     </div>
 
+    <!-- Restart Game Button -->
     <button id="restart-btn">Restart Game</button>
 
+    <!-- Socket.io script (needed for real-time multiplayer) -->
     <script src="/socket.io/socket.io.js"></script>
+    
+    <!-- Main JavaScript file for game logic -->
     <script src="game.js"></script>
 
 </body>
