@@ -1,0 +1,196 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Title & Instructions */
+.title-container {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: 10rem;
+    font-weight: bold;
+    color: white;
+    text-shadow: 2px 2px 5px #00ffff;
+}
+
+.instructions {
+    font-size: 1.2rem;
+    color: lightgray;
+    max-width: 600px;
+    margin: 0 auto;
+    text-shadow: 1px 1px 3px gray;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    font-family: Arial, sans-serif;
+    background-color: black;
+    color: white;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Game Title */
+h1, h2 {
+    margin: 10px 0;
+    text-align: center;
+}
+
+/* Board Styling */
+.board {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    border: 2px solid black;
+    width: 630px;
+    background-color: rgb(74, 74, 198);
+    padding: 5px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px cyan;
+}
+
+/* Columns and Cells */
+ul {
+    display: grid;
+    place-items: center;
+    padding: 0;
+    list-style: none;
+}
+
+ul p {
+    margin: 5px;
+    width: 75px;
+    height: 75px;
+    border: 2px solid black;
+    border-radius: 50%;
+    background-color: white;
+    transition: background-color 0.3s ease-in-out, transform 0.2s;
+}
+
+/* Hover Effect */
+ul:hover {
+    cursor: pointer;
+    background-color: rgb(98, 136, 238);
+}
+
+/* Piece Drop Effect */
+ul p.placed {
+    animation: dropPiece 0.3s ease-in-out;
+}
+
+@keyframes dropPiece {
+    0% {
+        transform: translateY(-50px);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Animated Stars */
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: white;
+    opacity: 0;
+    animation: twinkle 3s infinite alternate ease-in-out;
+}
+
+/* Random twinkle effect */
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.8); }
+}
+
+/* Import a pixel-style game font */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+/* Restart Button (Retro Style) */
+#restart-btn {
+    margin-top: 20px;
+    padding: 15px 25px;
+    font-size: 1rem;
+    font-weight: bold;
+    font-family: 'Press Start 2P', cursive;
+    color: white;
+    background-color: black;
+    border: 3px solid #00ffff;
+    border-radius: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 0 10px #00ffff;
+}
+
+/* Glow effect on hover */
+#restart-btn:hover {
+    background-color: #ffffff;
+    color: black;
+    transform: scale(1.1);
+    box-shadow: 0 0 20px #00ffff, 0 0 40px #00ffff;
+}
+
+/* Responsive styles */
+@media (max-width: 700px) {
+    .board {
+        width: 500px;
+    }
+    ul p {
+        width: 55px;
+        height: 55px;
+    }
+}
+
+@media (max-width: 520px) {
+    .board {
+        width: 400px;
+    }
+    ul p {
+        width: 40px;
+        height: 40px;
+    }
+}
+
+@media (max-width: 420px) {
+    .board {
+        width: 320px;
+    }
+    ul p {
+        width: 30px;
+        height: 30px;
+    }
+}
+
+/* Twinkling Stars */
+.star {
+    position: absolute;
+    width: 3px;
+    height: 3px;
+    background: white;
+    opacity: 0;
+    animation: twinkle 3s infinite alternate ease-in-out, moveStars 10s infinite linear;
+}
+
+/* Random twinkle effect */
+@keyframes twinkle {
+    0% { opacity: 0; transform: scale(0.8); }
+    50% { opacity: 1; transform: scale(1.2); }
+    100% { opacity: 0; transform: scale(0.8); }
+}
+
+/* Slight star movement */
+@keyframes moveStars {
+    0% { transform: translateY(0px); }
+    50% { transform: translateY(2px); }
+    100% { transform: translateY(0px); }
+}
