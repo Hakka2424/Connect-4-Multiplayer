@@ -17,8 +17,8 @@ Welcome to my **Connect 4** game! This is a **classic two-player game** where pl
 ---
 
 ## **🔧 How to Play**
-1. Start the server and use the correct URL Link.  
-2. Share the game **room link** with your opponent to join the same game.  
+1. **Start the server** and open the game in your browser.  
+2. Share the **game room link** with your opponent to join the same game.  
 3. Players take turns dropping pieces in a **7x6 grid**.  
 4. The first player to connect **4 in a row (vertically, horizontally, or diagonally) wins!**  
 5. The game announces the winner and resets when the **Restart** button is clicked.  
@@ -35,8 +35,8 @@ If not installed, download it from: https://nodejs.org/
 
 ### **2️⃣ Clone the Repository**
 ```
-git clone https://github.com/Hakka2424/Connect4.git
-cd Connect4
+git clone https://github.com/Hakka2424/Connect-4-Multiplayer.git
+cd Connect-4-Multiplayer
 ```
 ### **3️⃣ Install Dependencies**
 Run the following command to install the required Node.js packages:
