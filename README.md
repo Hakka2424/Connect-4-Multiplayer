@@ -1,7 +1,5 @@
 # 🎮 **Connect 4 - Multiplayer Web Game**  
 
-## 🌐 **Play Now: [hakka2424.github.io/Connect4/](https://hakka2424.github.io/Connect4/)**  
-
 Welcome to my **Connect 4** game! This is a **classic two-player game** where players take turns dropping pieces into a grid to try and connect **four in a row** before their opponent. Built using **HTML, CSS, JavaScript, and Socket.io**, this game supports **real-time multiplayer functionality**.
 
 ---
@@ -19,7 +17,7 @@ Welcome to my **Connect 4** game! This is a **classic two-player game** where pl
 ---
 
 ## **🔧 How to Play**
-1. Open the game in your browser: **[Play Online](https://hakka2424.github.io/Connect4/)**.  
+1. Start the server and use the correct URL Link.  
 2. Share the game **room link** with your opponent to join the same game.  
 3. Players take turns dropping pieces in a **7x6 grid**.  
 4. The first player to connect **4 in a row (vertically, horizontally, or diagonally) wins!**  
